@@ -1,11 +1,12 @@
 .attribution {
-  font-size: 14px;
+font-size: 14px;
   text-align: center;
   margin-top: 30px;
 
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  white-space: nowrap;
 }
 /* <uniquifier>: Use a unique and descriptive class name
 <weight>: Use a value from 100 to 900 */
@@ -33,6 +34,11 @@
 html {
   font-size: 14px;
 }
+
+a:focus{
+    outline: 2px dashed red;
+}
+
 html, body {
     font-family: "Inter", sans-serif;
     width: 100%;
@@ -47,7 +53,7 @@ html, body {
     max-width: 1440px;
     margin: 20px auto;
     display: flex;
-    flex-grow: column wrap;
+    flex-grow: column nowrap;
     justify-content: center;
     /* padding-bottom: 10px; */
 }
@@ -124,22 +130,34 @@ html, body {
     font-weight: 600;
     cursor: pointer;
 }
-.contact_link a:hover {
+.contact_link a:is(:hover, :focus) {
     display: flex;
     background-color: var(--color1);
     color: var(--color3);
     transform: scale(1.1);
     transition: all .5s ease-in-out;
+    outline: none;
 }
 
 /* Responsiveness */
 /* @ width of 375 */
 
 @media screen and (max-width: 375px) {
-    .container {
+    body {
+        width: 100%;
+    }
+    .back_color {
         height: fit-content;
+        margin: 0;
     }
     .header {
         padding: 2rem 1rem 1rem;
-    }    
+    }
+    .contact_link a:is(:hover, :focus) {
+        display: flex;
+        background-color: var(--color1);
+        color: var(--color3);
+        transform: scale(0.9);
+        transition: all .5s ease-in;
+    }
 }
