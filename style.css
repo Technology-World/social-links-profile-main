@@ -10,31 +10,36 @@
 /* <uniquifier>: Use a unique and descriptive class name
 <weight>: Use a value from 100 to 900 */
 
+        /* ROOT */
+
 :root {
+    /* COLORS */
   --color1: hsl(75, 94%, 57%);
   --color2: hsl(0, 0%, 100%);
   --color3: hsl(0, 0%, 20%);
   --color4: hsl(0, 0%, 12%);
   --color5: hsl(0, 0%, 8%);
 }
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
+
+/* GENERAL STYLE */
 html {
   font-size: 14px;
 }
 html, body {
     font-family: "Inter", sans-serif;
+    width: 100%;
     font-weight: 600;
-    max-height: 100%;
+    max-height: 100vh;
 }
-.profile {
-        max-height: 100vh;
-        /* border: 1px solid blue; */
-}
+
 .back_color {
     background-color: var(--color5);
     background-repeat: no-repeat;
@@ -42,15 +47,17 @@ html, body {
     max-width: 1440px;
     margin: 20px auto;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-bottom: 10px;
+    flex-grow: column wrap;
+    justify-content: center;
+    /* padding-bottom: 10px; */
 }
 
 /* .container {
     max-width: 1440px;
     height: auto;
 } */
+
+/* HEADER SECTION */
 .header_section {
     display: flex;
     align-items: center;
@@ -105,9 +112,11 @@ html, body {
     display: grid;
     grid-template-columns: repeat(auto, 1fr);
     gap: 1.5rem;
+
 }
 .contact_link a {
-    padding: 1rem 8rem;
+    display: block;
+    padding: 1rem 7rem;
     background-color: var(--color3);
     border-radius: 0.5rem;
     border: none;
@@ -116,14 +125,12 @@ html, body {
     cursor: pointer;
 }
 .contact_link a:hover {
+    display: flex;
     background-color: var(--color1);
     color: var(--color3);
-    padding: 1.2rem;
-    text-align: right;
+    transform: scale(1.1);
+    transition: all .5s ease-in-out;
 }
-/* .contact_link p a{
-    color: var(--color2);
-} */
 
 /* Responsiveness */
 /* @ width of 375 */
