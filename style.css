@@ -50,10 +50,10 @@ html, body {
     background-color: var(--color5);
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 1440px;
-    margin: 20px auto;
+    /* max-width: 1440px; */
+    margin: auto;
     display: flex;
-    flex-grow: column nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
     /* padding-bottom: 10px; */
 }
@@ -78,6 +78,7 @@ html, body {
     background-color: var(--color4);
     padding: 2rem 3rem;
     border-radius: 1rem;
+    border: 1px solid red;
 }
 .logo {
     margin-bottom: 3rem;
