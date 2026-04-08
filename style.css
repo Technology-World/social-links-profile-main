@@ -1,17 +1,6 @@
-.attribution {
-    font-size: 14px;
-    text-align: center;
-    margin-top: 30px;
-
+a {
+    color: var(--color1);
 }
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-    white-space: nowrap;
-}
-
-/* <uniquifier>: Use a unique and descriptive class name
-<weight>: Use a value from 100 to 900 */
 
 /* ROOT */
 
@@ -38,25 +27,30 @@ html {
 }
 
 a:is(:focus, :hover) {
-    outline: 2px dashed red;
+    color: red;
 }
 
 html, body {
     font-family: "Inter", sans-serif;
     width: 100%;
     font-weight: 600;
-    max-height: 100vh;
 }
 
 .back_color {
     background-color: var(--color5);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: auto;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -65,7 +59,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem 0;
+    padding: 1.5rem 0;
 }
 
 .header {
@@ -147,16 +141,23 @@ html, body {
     outline: none;
 }
 
-/* Responsiveness */
-/* @ width of 375 */
+.year {
+    color: var(--color2);
+    font-weight: 400;
+    margin-top: 1rem;
+}
 
-@media screen and (max-width: 375px) {
+/* Responsiveness */
+/* @ width of 475 */
+
+@media screen and (max-width: 475px) {
     body {
         width: 100%;
+        text-align: center;
     }
 
     .back_color {
-        height: fit-content;
+        min-height: 100dvh;
         margin: 0;
     }
 
